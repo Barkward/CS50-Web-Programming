@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Search</title>
+        <title>Advanced Search</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         
         <div class="topnav">
+            <img src="images/googlelogo.jpg" alt="Google Logo" width="80"/>
             <a href="index.html">Google Search</a>
             <a href="image.html">Image Search</a>
         </div> 
-        <form action="http://www.google.ca/advanced_search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
+       <h1>Advanced Search</h1>
+        <hr size="1">
+        <form>
+
+            <label>Find pages with...</label>
+            <input type="text" id="f1" name="f1"><br>
+            
+            <label>this exact word or phrase: </label>
+            <input type="text" id="f2" name="f2"><br>
+
+            <label>any of these words:</label>
+            <input type="text" id="f3" name="f3"><br>
+
+            <label>none of these words:</label>
+            <input type="text" id="f4" name="f4"><br>
+
+
         </form>
     </body>
 </html>
