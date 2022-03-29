@@ -8,22 +8,36 @@
     font-size: 12px;
   }
 
+  .logo-row{
+    text-align: center;
+  }
+
+  .logo {
+    width: 215px;
+    height: 76px;
+    padding-top: 180px;
+  }
 
  .container{
     display: flex;
     justify-content: center;
+    padding-top:20px;
    }
    
 /*Input bar with rounded corners*/
 
 input{
+    background-image: url(images/search_icon.webp);
+    background-repeat: no-repeat;
+    background-position: right;
     border-radius:40px;
     padding: 10px;
-    margin: 10px;
+    margin-left: 10px;
     height: 20px;
     width: 500px;
     border:1px
-    outline:none;
+    outline: none;
+    
 }
 
 
