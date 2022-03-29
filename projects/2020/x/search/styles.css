@@ -29,7 +29,7 @@ hr{
 
 label{
   font-size: small;
-  padding-left: 12px;
+  padding-left: 40px;
   padding-top: 10px;
 }
 
@@ -74,6 +74,8 @@ input{
 /* normal input bar */
 
 #f1 {
+  display: block;
+  margin-left: 50px;
   border-radius: 0px;
   background-image: none;
   height: 10px;
