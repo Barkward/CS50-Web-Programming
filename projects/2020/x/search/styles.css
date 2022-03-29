@@ -18,10 +18,16 @@
     padding-top: 180px;
   }
 
+  button{
+    display: flex;
+    margin: auto;
+  }
+
  .container{
     display: flex;
     justify-content: center;
     padding-top:20px;
+    padding-bottom: 30px;
    }
    
 /*Input bar with rounded corners*/
