@@ -9,6 +9,6 @@ urlpatterns = [
     path("", views.index, name="index"),
 
     #If user visits /wiki/<anything> display page
-    path("wiki/", views.wiki, name="wiki")
+    path("/wiki/<str:entry>", views.wiki, name="wiki")
 
 ]

@@ -1,5 +1,8 @@
 from ast import Return
-from django.shortcuts import render
+from xml.etree.ElementInclude import include
+from django.http import HttpResponse
+from django.shortcuts import render,HttpResponse
+from markdown import Markdown
 
 from . import util
 
@@ -9,8 +12,20 @@ def index(request):
         "entries": util.list_entries()
     })
 
-#Function to show the page when user types "/wiki/ <name>"
+
+#Function to show the page when user types "/wiki/ <name>" -- return nonExistant in not found
 def wiki (request, name):
-    return render(request, (f"encyclopedia/wiki/, {name}"), {
-        "entries": util.get_entry()
-    })
+    mark = Markdown()
+    page = util.get_entry(name)
+
+    if page is None:
+        return render(request, "encyclopeia/nopage.html", {
+            "entryTitle":name
+        })
+
+    else:
+        return render(request, "encyclopedia/entry.html", {
+
+            "entry":mark.convert(page),
+            "entryTitle": name
+        })
